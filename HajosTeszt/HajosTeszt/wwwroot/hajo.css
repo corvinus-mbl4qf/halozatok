@@ -1,23 +1,24 @@
 html, body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
+    overflow-y: hidden;
 }
 
 div, html, body{
     margin:0px;
 }
 
-
 #külső{
     margin: 30px;
-    height: 100%;
+    margin-bottom: 0px;
+    height: calc(100% - 60px);
     display: flex;
     flex-direction: column;
     background-color: #F4F3FA;
     border-radius: 20px;
 }
 
-#kérdés_szöveg{
+#kérdés_doboz{
     color: white;
     font-weight: 500;
     font-size: 36px;
@@ -68,6 +69,9 @@ div, html, body{
     display: flex;
     justify-content: center; /* align horizontal */
     align-items: center;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 
 .kerdes{
@@ -83,6 +87,15 @@ div, html, body{
     padding-left: 25px;
     align-items: center;
     font-size: 22px;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.kerdes:hover{
+    transform: scale(0.985);
 }
 
 .kattintható:hover {
@@ -97,9 +110,19 @@ div, html, body{
     border-color: #98D696;
 }
 
+.jó:hover{
+    transform: scale(1);
+    cursor: default;
+}
+
 .rossz{
     background-color: #F4BABA;
     border-color: #D9A5A5;
+}
+
+.rossz:hover{
+    transform: scale(1);
+    cursor: default;
 }
 
 @media only screen and (max-width: 1400px){
@@ -111,5 +134,13 @@ div, html, body{
     #kép {
         margin: auto;
         margin-bottom: 60px;
+    }
+
+    html, body{
+        overflow-y: auto;
+    }
+
+    #külső{
+        height: 100%;
     }
 }
