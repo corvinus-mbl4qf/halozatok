@@ -61,6 +61,8 @@ window.onload = function() {
     document.getElementById("válasz1").onclick = function () {
         if(jóválasz == 1){
             document.getElementById("válasz1").classList.add('jó');
+            document.getElementById("válasz2").classList.add('rossz');
+            document.getElementById("válasz3").classList.add('rossz');
         }
         else{
             document.getElementById("válasz1").classList.add('rossz');
@@ -69,7 +71,9 @@ window.onload = function() {
 
     document.getElementById("válasz2").onclick = function () {
         if(jóválasz == 2){
+            document.getElementById("válasz1").classList.add('rossz');
             document.getElementById("válasz2").classList.add('jó');
+            document.getElementById("válasz3").classList.add('rossz');
         }
         else{
             document.getElementById("válasz2").classList.add('rossz');
@@ -78,6 +82,8 @@ window.onload = function() {
 
     document.getElementById("válasz3").onclick = function () {
         if(jóválasz == 3){
+            document.getElementById("válasz1").classList.add('rossz');
+            document.getElementById("válasz2").classList.add('rossz');
             document.getElementById("válasz3").classList.add('jó');
         }
         else{
